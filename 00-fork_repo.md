@@ -1,3 +1,5 @@
+
+
 # Getting Started with Git and GitHub
 
 You have two options to complete parts 1-3 (Install, Editors, Command Line).  
@@ -69,5 +71,4 @@ Here's your first chance to practice this:
 
 What is your favorite emoji?  (Check out this [emoji cheat sheet](http://www.emoji-cheat-sheet.com/).)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> :geek:
