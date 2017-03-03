@@ -19,8 +19,18 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+> > pwd - show current working directory path
+mkdir dirname- creating a directory
+rm -r dirname - deleting a directory
+touch filename - creating a file
+rm filename - deleting a file
+mv oldfilename newfilename - renaming a file
+ls -a - listing hidden files
+cp dirname/filename dirname/ - copying a file from one directory to another
+ls - list all files and directories in the working directory
+cd - change directory
+ls -l - lists all contents of a directory in long format.
+mv filename dirname/ - moves file into directory
 ---
 
 ### Q2.  List Files in Unix   
@@ -34,8 +44,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+> > ls - list all files and directories in the working directory.
+ls -a - list all hidden files in working directory.
+ls -l - lists all contents of working directory in long format.
+ls -lh - lists all contents of working directory in long format and in alphabetical order by file extension.
+ls -lah - lists all hidden files of working directory in long format and in alphabetical order by file extension.
+ls -t - lists all contents of working directory ordered by the time they were last modified.
+ls - Glp - lists all contents of working directory in long format excluding columns containing Group information and marking directories with a / sign.
 ---
 
 ### Q3.  More List Files in Unix  
