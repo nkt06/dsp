@@ -67,7 +67,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 'xargs' lets us build and execute command lines from standard input. 
+
+> > E.g. find /tmp -name core -type f -print | xargs /bin/rm -f : Find files named core in or below the directory /tmp and delete them, processing filenames in such a way that file or directory names containing spaces or newlines are correctly handled.
 
  
 
