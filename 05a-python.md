@@ -28,7 +28,7 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python's lambda is a keyword used to generate anonymous functions. It can be used to sort complex objects using some of the object's indices as a key. E.g. sorted(x_tuples, key=lambda x: x[2])
 
 ---
 
@@ -36,7 +36,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> A list comprehension is used to take an existing sequence and perform some function and/or filter to it, resulting in a new list. (to be continued)
 
 ---
 
