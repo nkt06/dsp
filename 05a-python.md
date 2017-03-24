@@ -36,7 +36,20 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> A list comprehension is used to take an existing sequence and perform some function and/or filter to it, resulting in a new list. (to be continued)
+>> A list comprehension is used to take an existing sequence and perform some function and/or filter to it, resulting in a new list. 
+> > E.g. things = [3, 4, 6, 7, 0, 1]
+> > print [x*2 for x in things if x % 2 == 0]
+> > Equivalent with 'map' and 'filter':
+> > print map(lambda x: x*2, filter(lambda y: y % 2 == 0, things))
+> > Both have the same capabilities, but list comprehensions are more direct and clearer.
+> > Set comprehensions are used to take an existing sequence and perform some function and/or filter to it, resulting in a new set. 
+> > E.g. In a list of names, we are only interested in names longer then one character and wish to represent all names in the same format: The first letter should be capitalised, all other characters should be lower case.
+> > names = [ 'Bob', 'JOHN', 'alice', 'bob', 'ALICE', 'J', 'Bob' ]
+> > { name[0].upper() + name[1:].lower() for name in names if len(name) > 1 }
+> > Dictionary comprehensions are used to take an existing sequence and perform sum function and/or filter to it, resulting in a new dictionary.
+> > E.g. We require a dictionary in which the occurrences of upper and lower case characters are combined.
+> > mcase = {'a':10, 'b': 34, 'A': 7, 'Z':3}
+> > { k.lower() : mcase.get(k.lower(), 0) + mcase.get(k.upper(), 0) for k in mcase.keys() }
 
 ---
 
@@ -51,7 +64,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days
 
 b.  
 ```
@@ -59,7 +72,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513 days
 
 c.  
 ```
@@ -67,7 +80,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
