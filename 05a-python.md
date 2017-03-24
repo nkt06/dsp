@@ -38,7 +38,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> A list comprehension is used to take an existing sequence and perform some function and/or filter to it, resulting in a new list. 
 
-> > E.g. things = [3, 4, 6, 7, 0, 1]
+E.g. things = [3, 4, 6, 7, 0, 1]
 >> print [x*2 for x in things if x % 2 == 0]
 >> Equivalent with 'map' and 'filter':
 >> print map(lambda x: x*2, filter(lambda y: y % 2 == 0, things))
