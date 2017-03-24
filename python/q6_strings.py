@@ -3,6 +3,15 @@
 
 
 def donuts(count):
+    def donuts(count):
+    try: 
+        count = int(count)
+        if count >= 0 and count <= 10: print ("Number of donuts:", count)
+        elif count >= 11: print ("Number of donuts: many")
+        else: print ("Please enter an integer.")
+    except: 
+        print ("Please enter an integer.")
+       
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -22,6 +31,8 @@ def donuts(count):
 
 
 def both_ends(s):
+    if len(s) <= 1: print ( )
+    elif len(s) >= 2: print (s[0] + s[1] + s[-2] + s[-1])
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
@@ -41,6 +52,15 @@ def both_ends(s):
 
 
 def fix_start(s):
+    old = list(s)
+    first_letter = old[0]
+    new = list()
+    for letter in old:
+        if letter == first_letter: 
+            letter = '*'
+        new.append(letter)
+    new[0] = first_letter
+    print (''.join(new))
     """
     Given a string s, return a string where all occurences of its
     first char have been changed to '*', except do not change the
@@ -60,6 +80,13 @@ def fix_start(s):
 
 
 def mix_up(a, b):
+    first_word = list(a)
+    second_word = list(b)
+    q, p = first_word[0], first_word[1]
+    x, y = second_word[0], second_word[1]
+    first_word[0], first_word[1] = x, y
+    second_word[0], second_word[1] = q, p
+    print (''.join(first_word), ''.join(second_word))
     """
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
@@ -78,6 +105,9 @@ def mix_up(a, b):
 
 
 def verbing(s):
+    if len(s) <= 2: print(s)
+    elif len(s) >= 3 and s[-3] == 'i' and s[-2] == 'n' and s[-1] == 'g': print(s + 'ly')
+    else: print (s + 'ing')
     """
     Given a string, if its length is at least 3, add 'ing' to its end.
     Unless it already ends in 'ing', in which case add 'ly' instead.
