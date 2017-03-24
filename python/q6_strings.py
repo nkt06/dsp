@@ -125,6 +125,23 @@ def verbing(s):
 
 
 def not_bad(s):
+    import re
+    sentence = re.findall(r"[\w']+|[.,!?;]", s)
+    x = 0
+    y = 0
+    z = 0
+    for word in sentence:
+        x = x + 1
+        if word == "not": y = x
+        elif word == "bad": z = x
+    if z > y:
+        sentence[y-1] = "good"
+        del sentence[y:z]
+        output = ' '.join(sentence)
+        print (re.sub(r'\s([?.!"](?:\s|$))', r'\1', output))
+    else:
+        output = ' '.join(sentence)
+        print (re.sub(r'\s([?.!"](?:\s|$))', r'\1', output))
     """
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
