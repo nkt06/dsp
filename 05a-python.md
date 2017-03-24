@@ -42,10 +42,12 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >> Equivalent with 'map' and 'filter':
 >> print map(lambda x: x*2, filter(lambda y: y % 2 == 0, things))
 >> Both have the same capabilities, but list comprehensions are more direct and clearer.
+
 >> Set comprehensions are used to take an existing sequence and perform some function and/or filter to it, resulting in a new set. 
 >> E.g. In a list of names, we are only interested in names longer then one character and wish to represent all names in the same format: The first letter should be capitalised, all other characters should be lower case.
 >> names = [ 'Bob', 'JOHN', 'alice', 'bob', 'ALICE', 'J', 'Bob' ]
 >> { name[0].upper() + name[1:].lower() for name in names if len(name) > 1 }
+
 >> Dictionary comprehensions are used to take an existing sequence and perform sum function and/or filter to it, resulting in a new dictionary.
 >> E.g. We require a dictionary in which the occurrences of upper and lower case characters are combined.
 >> mcase = {'a':10, 'b': 34, 'A': 7, 'Z':3}
