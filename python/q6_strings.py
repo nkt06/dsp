@@ -162,6 +162,24 @@ def not_bad(s):
 
 
 def front_back(a, b):
+    first_word = list(a)
+    second_word = list(b)
+    t = len(first_word) / 2
+    s = len(second_word) / 2
+    x = t + 0.5
+    y = s + 0.5
+    if int(len(first_word)) % 2 == 1 and int(len(second_word)) % 2 == 1:
+        new_word = first_word[:int(x)] + second_word[:int(y)] + first_word[int(x):] + second_word[int(y):]
+        print (''.join(new_word))
+    elif int(len(first_word)) % 2 == 1:
+        new_word = first_word[:int(x)] + second_word[:int(s)] + first_word[int(x):] + second_word[int(s):]
+        print (''.join(new_word))
+    elif int(len(second_word)) % 2 == 1:
+        new_word = first_word[:int(t)] + second_word[:int(y)] + first_word[int(t):] + second_word[int(y):]
+        print (''.join(new_word))
+    else: 
+        new_word = first_word[:int(t)] + second_word[:int(s)] + first_word[int(t):] + second_word[int(s):]
+        print (''.join(new_word))
     """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
