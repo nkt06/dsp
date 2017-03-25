@@ -3,6 +3,12 @@
 
 
 def match_ends(words):
+    x = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            x = x + 1
+        else: continue
+    print (x)
     """
     Given a list of strings, return the count of the number of strings
     where the string length is 2 or more and the first and last chars
@@ -19,6 +25,16 @@ def match_ends(words):
 
 
 def front_x(words):
+    words.sort()
+    r = 0
+    x_firstletter = list()
+    for word in words:
+        if word[0] == "x":
+            x_firstletter.append(word)
+        else: continue
+    x_firstletter.sort()
+    new_list = [word for word in words if word[0] != "x"]
+    print (x_firstletter + new_list)
     """
     Given a list of strings, return a list with the strings in sorted
     order, except group all the strings that begin with 'x' first.
@@ -36,6 +52,8 @@ def front_x(words):
 
 
 def sort_last(tuples):
+    tuples.sort(key=lambda x: x[-1])
+    print (tuples)
     """
     Given a list of non-empty tuples, return a list sorted in
     increasing order by the last element in each tuple.
@@ -53,6 +71,17 @@ def sort_last(tuples):
 
 
 def remove_adjacent(nums):
+    x = -1
+    output_list = list()
+    for num in nums:
+        x = x + 1
+        if x == 0: 
+            output_list.append(nums[x])
+        elif x!=0 and nums[x] != nums[x-1]: 
+            output_list.append(nums[x])
+        else:
+            continue
+    print (output_list)
     """
     Given a list of numbers, return a list where all adjacent equal
     elements have been reduced to a single element, so [1, 2, 2, 3]
@@ -72,13 +101,16 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
+    new_list = list1 + list2
+    new_list.sort()
+    print (new_list)
     """
     Given two lists sorted in increasing order, create and return a
     merged list of all the elements in sorted order. You may modify
     the passed in lists. Ideally, the solution should work in "linear"
     time, making a single pass of both lists.
 
-    >>> linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
+        >>> linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
     ['aa', 'bb', 'cc', 'xx', 'zz']
     >>> linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz'])
     ['aa', 'bb', 'cc', 'xx', 'zz']
